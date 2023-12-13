@@ -23,37 +23,47 @@ class EmployeeResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('country_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('state_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('city_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('department_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('first_name')
+                Forms\Components\Section::make('User Name')
+                ->description('Put the user name details in.')
+                ->schema([
+                    Forms\Components\TextInput::make('first_name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('last_name')
+                    Forms\Components\TextInput::make('last_name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('middle_name')
+                    Forms\Components\TextInput::make('middle_name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('address')
+                ])->columns(3),
+                Forms\Components\Section::make('User Address')
+                ->schema([
+                    Forms\Components\TextArea::make('address')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('zip_code')
+                    Forms\Components\TextInput::make('zip_code')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\DatePicker::make('date_of_birth')
+                ])->columns(2),
+                Forms\Components\Section::make('Dates')
+                ->schema([
+                    Forms\Components\DatePicker::make('date_of_birth')
                     ->required(),
-                Forms\Components\DatePicker::make('date_hired')
+                    Forms\Components\DatePicker::make('date_hired')
                     ->required(),
+                ])->columns(2),
+                // Forms\Components\TextInput::make('country_id')
+                //     ->required()
+                //     ->numeric(),
+                // Forms\Components\TextInput::make('state_id')
+                //     ->required()
+                //     ->numeric(),
+                // Forms\Components\TextInput::make('city_id')
+                //     ->required()
+                //     ->numeric(),
+                // Forms\Components\TextInput::make('department_id')
+                //     ->required()
+                //     ->numeric(),
             ]);
     }
 
@@ -61,18 +71,18 @@ class EmployeeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('country_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('state_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('city_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('department_id')
-                    ->numeric()
-                    ->sortable(),
+                // Tables\Columns\TextColumn::make('country_id')
+                //     ->numeric()
+                //     ->sortable(),
+                // Tables\Columns\TextColumn::make('state_id')
+                //     ->numeric()
+                //     ->sortable(),
+                // Tables\Columns\TextColumn::make('city_id')
+                //     ->numeric()
+                //     ->sortable(),
+                // Tables\Columns\TextColumn::make('department_id')
+                //     ->numeric()
+                //     ->sortable(),
                 Tables\Columns\TextColumn::make('first_name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('last_name')
