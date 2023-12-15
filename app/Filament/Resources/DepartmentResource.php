@@ -17,7 +17,7 @@ class DepartmentResource extends Resource
 {
     protected static ?string $model = Department::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-flag'; //untuk mengedit icon cukup ganti "flag" dengan yang ada pada heroicon
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap'; //untuk mengedit icon cukup ganti "flag" dengan yang ada pada heroicon
     protected static ?string $navigationLabel = 'Department'; //untuk mengedit nama label yang di sebelah kiri
     protected static ?string $modelLabel = 'Department'; //untuk mengedit tulisan directori path. contoh "country > create"
     protected static ?string $navigationGroup = 'System Management'; //untuk membuat group label di sebelah kiri

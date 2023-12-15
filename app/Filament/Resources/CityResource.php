@@ -17,7 +17,7 @@ class CityResource extends Resource
 {
     protected static ?string $model = City::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-flag'; //untuk mengedit icon cukup ganti "flag" dengan yang ada pada heroicon
+    protected static ?string $navigationIcon = 'heroicon-o-building-office-2'; //untuk mengedit icon cukup ganti "flag" dengan yang ada pada heroicon
     protected static ?string $navigationLabel = 'City'; //untuk mengedit nama label yang di sebelah kiri
     protected static ?string $modelLabel = 'City'; //untuk mengedit tulisan directori path. contoh "country > create"
     protected static ?string $navigationGroup = 'System Management'; //untuk membuat group label di sebelah kiri

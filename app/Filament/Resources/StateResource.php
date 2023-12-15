@@ -17,7 +17,7 @@ class StateResource extends Resource
 {
     protected static ?string $model = State::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-flag'; //untuk mengedit icon cukup ganti "flag" dengan yang ada pada heroicon
+    protected static ?string $navigationIcon = 'heroicon-o-building-library'; //untuk mengedit icon cukup ganti "flag" dengan yang ada pada heroicon
     protected static ?string $navigationLabel = 'State'; //untuk mengedit nama label yang di sebelah kiri
     protected static ?string $modelLabel = 'State'; //untuk mengedit tulisan directori path. contoh "country > create"
     protected static ?string $navigationGroup = 'System Management'; //untuk membuat group label di sebelah kiri
