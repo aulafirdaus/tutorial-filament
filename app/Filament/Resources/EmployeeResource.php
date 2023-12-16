@@ -24,8 +24,7 @@ class EmployeeResource extends Resource
     {
         return $form
             ->schema([
-            Forms\Components\Section::make('User Name')
-            ->description('Put the user name details in.')
+            Forms\Components\Section::make('Relationship')
             ->schema([
                 Forms\Components\Select::make('country_id')
                     ->relationship(name: 'country', titleAttribute: 'name')
