@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Employee extends Model
 {
     use HasFactory;
-    protected $fillable = ['state_id', 'name', 'country_id', 'city_id', 'department_id'];
-    // protected $guarded = [];
+    protected $guarded = [];
 
     public function country(): BelongsTo
     {
