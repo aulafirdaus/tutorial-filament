@@ -28,22 +28,22 @@ class EmployeeResource extends Resource
             ->description('Put the user name details in.')
             ->schema([
                 Forms\Components\Select::make('country_id')
-                    ->relationship(name: 'country_id', titleAttribute: 'name')
+                    ->relationship(name: 'country', titleAttribute: 'name')
                     ->searchable()
                     ->preload()
                     ->required(),
                 Forms\Components\Select::make('state_id')
-                    ->relationship(name: 'state_id', titleAttribute: 'name')
+                    ->relationship(name: 'state', titleAttribute: 'name')
                     ->searchable()
                     ->preload()
                     ->required(),
                 Forms\Components\Select::make('city_id')
-                    ->relationship(name: 'city_id', titleAttribute: 'name')
+                    ->relationship(name: 'city', titleAttribute: 'name')
                     ->searchable()
                     ->preload()
                     ->required(),
                 Forms\Components\Select::make('department_id')
-                    ->relationship(name: 'department_id', titleAttribute: 'name')
+                    ->relationship(name: 'department', titleAttribute: 'name')
                     ->searchable()
                     ->preload()
                     ->required(),
